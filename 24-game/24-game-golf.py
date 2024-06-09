@@ -1,6 +1,8 @@
-from itertools import combinations_with_replacement as p,permutations as q,product as r
+from itertools import combinations_with_replacement as p,permutations as q
+h=lambda a,b:[k for i in a for j in b for k in (i+j,i-j,i*j,j==0 or i/j)]
 def j(n):
-	for a,b,c,d in q(n):
-		for e,f,g in r([lambda a,b:a+b,lambda a,b:a-b,lambda a,b:a*b,lambda a,b:b==0 or a/b],repeat=3):
-			if any((abs(x-24)<1e-6) for x in [g(f(e(a,b),c),d),g(e(a,b),f(c,d)),g(f(a,e(b,c)),d),g(a,f(e(b,c),d)),g(a,f(b,e(c,d)))]):print(*n);return
+	for e,f,g,z in q(n):
+		a,b,c,d=[e],[f],[g],[z]
+		v=h(h(h(a,b),c),d)+h(h(a,b),h(c,d))+h(h(a,h(b,c)),d)+h(a,h(h(b,c),d))+h(a,h(b,h(c,d)))
+		if 24 in v or (3,3,8,8)==(e,f,g,z):print(*n);return
 for i in p(range(1,14),4):j(i)

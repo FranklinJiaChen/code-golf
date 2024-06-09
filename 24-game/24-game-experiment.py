@@ -21,7 +21,7 @@ for comb in combinations_with_replacement(range(1, 14), 4):
     print_if_make_24(comb)
 
 from itertools import combinations_with_replacement as p,permutations as q
-h=lambda a, b:[k for i in a for j in b for k in (i+j, i-j, i*j, i/j if j else 0)]
+h=lambda a, b:[k for i in a for j in b for k in (i+j, i-j, i*j, i/j if j else 0)];
 def j(n):
 	for e,f,g,z in q(n):
 		a = [e]
