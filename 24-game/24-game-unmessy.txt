@@ -11,7 +11,7 @@ def print_if_make_24(nums):
                            op3(op2(a, op1(b, c)), d),
                            op3(a, op2(op1(b, c), d)),
                            op3(a, op2(b, op1(c, d)))]
-            if any(not(round(expr - 24,6)) for expr in expressions):
+            if any((abs(expr - 24) < 1e-6) for expr in expressions):
                 print(*nums)
                 return
 
