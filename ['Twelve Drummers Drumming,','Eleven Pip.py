@@ -1,1 +1,0 @@
-'Twelve Drummers Drumming,qEleven Pipers Piping,qTen Lords-a-Leaping,qNine Ladies Dancing,qEight Maids-a-Milking,qSeven Swans-a-Swimming,qSix Geese-a-Laying,qFive Gold Rings,qFour Calling Birds,qThree French Hens,qTwo Turtle Doves, andqA Partridge in a Pear Tree.\n'.split('q')
