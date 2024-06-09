@@ -1,13 +1,9 @@
-from itertools import permutations, product
+from itertools import combinations_with_replacement, permutations, product
 
-# Define basic arithmetic operations
 ops = [lambda a, b: a + b, lambda a, b: a - b, lambda a, b: a * b, lambda a, b: a / b if b != 0 else 1e9]
 
-# Tolerance for floating-point comparison
-EPSILON = 1e-6
-
 def is_close_to_24(value):
-    return abs(value - 24) < EPSILON
+    return abs(value - 24) < 1e-6
 
 def print_if_solve24(nums):
     for a, b, c, d in permutations(nums):
@@ -22,9 +18,7 @@ def print_if_solve24(nums):
                 print(*nums)
                 return
 
-# Generate all possible combinations
-possible_combinations = [(a, b, c, d) for a in range(1, 14) for b in range(a, 14) for c in range(b, 14) for d in range(c, 14)]
+possible_combinations = combinations_with_replacement(range(1, 14), 4)
 
-# Check each combination
 for comb in possible_combinations:
     print_if_solve24(comb)
