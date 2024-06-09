@@ -1,19 +1,6 @@
-from itertools import combinations_with_replacement, permutations, product
-
-def print_if_make_24(nums):
-    for a, b, c, d in permutations(nums):
-        for op1, op2, op3 in product([lambda a, b: a + b,
-                          lambda a, b: a - b,
-                          lambda a, b: a * b,
-                          lambda a, b: a / b if b != 0 else 1e9], repeat=3):
-            expressions = [op3(op2(op1(a, b), c), d),
-                           op3(op1(a, b), op2(c, d)),
-                           op3(op2(a, op1(b, c)), d),
-                           op3(a, op2(op1(b, c), d)),
-                           op3(a, op2(b, op1(c, d)))]
-            if any(not(round(expr - 24,6)) for expr in expressions):
-                print(*nums)
-                return
-
-for comb in combinations_with_replacement(range(1, 14), 4):
-    print_if_make_24(comb)
+from itertools import combinations_with_replacement as p,permutations as q,product as r
+def j(n):
+    for a,b,c,d in q(n):
+        for e,f,g in r([lambda a,b:a+b,lambda a,b:a-b,lambda a,b:a*b,lambda a,b:a/b if b!= 0 else 1e9],repeat=3):
+            if any((abs(x-24)<1e-6) for x in [g(f(e(a,b),c),d),g(e(a,b),f(c,d)),g(f(a,e(b,c)),d),g(a,f(e(b,c),d)),g(a,f(b,e(c,d)))]):print(*n);return
+for i in p(range(1,14),4):j(i)
