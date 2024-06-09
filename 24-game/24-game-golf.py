@@ -1,24 +1,7 @@
-from itertools import combinations_with_replacement, permutations, product
-
-ops = [lambda a, b: a + b, lambda a, b: a - b, lambda a, b: a * b, lambda a, b: a / b if b != 0 else 1e9]
-
-def is_close_to_24(value):
-    return abs(value - 24) < 1e-6
-
-def print_if_solve24(nums):
-    for a, b, c, d in permutations(nums):
-        for op1, op2, op3 in product(ops, repeat=3):
-            if any(is_close_to_24(expr) for expr in [
-                op3(op2(op1(a, b), c), d),
-                op3(op1(a, b), op2(c, d)),
-                op3(op2(a, op1(b, c)), d),
-                op3(a, op2(op1(b, c), d)),
-                op3(a, op2(b, op1(c, d)))
-            ]):
-                print(*nums)
-                return
-
-possible_combinations = combinations_with_replacement(range(1, 14), 4)
-
-for comb in possible_combinations:
-    print_if_solve24(comb)
+from itertools import combinations_with_replacement as p,permutations as q,product as r
+def j(nums):
+    for a, b, c, d in q(nums):
+        for e, f, g in r([lambda a,b:a+b,lambda a,b:a-b, lambda a,b:a*b, lambda a,b:a/b if b!= 0 else 1e9], repeat=3):
+            if any((abs(expr-24)<1e-6) for expr in [g(f(e(a, b), c), d),g(e(a, b), f(c, d)),g(f(a, e(b, c)), d),g(a, f(e(b, c), d)),g(a, f(b, e(c, d)))]):print(*nums);return
+for i in p(range(1, 14), 4):
+    j(i)
