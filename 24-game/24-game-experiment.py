@@ -1,2 +1,9 @@
-from itertools import*;h=lambda a,b:[k for i in a for j in b for k in(i+j,i-j,i*j,j and i/j)]
-for i in combinations_with_replacement([[p] for p in range(1,14)],4):print(*(' '.join(map(str,s)) for s in i)) if any(r in [k for a,b,c,d in permutations(i) for k in h(h(h(a,b),c),d)+h(h(a,b),h(c,d))+h(h(a,h(b,c)),d)+h(a,h(h(b,c),d))+h(a,h(b,h(c,d)))] for r in (24,8/(3-8/3))) else 0
+"""
+eval has to be OP if I figure out how to get it to work without timing out
+"""
+from itertools import*
+operator = '+-*/'
+
+for i in combinations_with_replacement(range(1,14),4):
+    for a,b,c,d in permutations(i):
+        if 24 in [eval(f'{a}{e}{b}{f}{c}{g}{d}') for e,f,g in product(operator,repeat=3)]:print(*i);break
