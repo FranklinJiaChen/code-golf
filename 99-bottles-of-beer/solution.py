@@ -1,2 +1,2 @@
 i=99
-while i+1:print(i or 'No more','bottle'+'s of beer on the wall,'[i==1:],i or'no more','bottle'+'s of beer.\n'[i==1:]+('Take one down and pass it around,'if i else 'Go to the store and buy some more,'),(i-1)%100 or'no more','bottle'+'s of beer on the wall.\n'[i==2:]);i-=1
+while i+1:print(i or'No more','bottle'+'s of beer on the wall,'[i==1:],i or'no more','bottle'+'s of beer.\n'[i==1:]+('Take one down and pass it around,'if i else'Go to the store and buy some more,'),(i-1)%100 or'no more','bottle'+'s of beer on the wall.\n'[i==2:]);i-=1
