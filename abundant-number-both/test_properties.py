@@ -100,4 +100,14 @@ abundant=[12,
 # for c in cheat_sheet:
 #     print(ord(c))
 
-print(chr(160))
+
+# def num_array_to_byte_string(num_array: list[int]) -> str:
+#     str = ""
+#     for num in num_array:
+#         str += num.to_bytes(1, 'big')
+#     return str
+
+# print(num_array_to_byte_string(abundant))
+
+
+# for x in b'~': print(x)

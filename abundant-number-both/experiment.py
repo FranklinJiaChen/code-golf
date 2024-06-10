@@ -1,0 +1,1 @@
+for c in b'$(*068<BFHNPTXZ`dfhlprx':print(c)

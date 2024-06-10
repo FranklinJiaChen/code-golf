@@ -1,1 +1,0 @@
-for c in "$(*068<BFHNPTXZ`dfhlprx~ ¢¨®°´ºÀÄÆÈ":print(ord(c))
