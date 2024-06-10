@@ -1,1 +1,1 @@
-for c in b'$(*068<BFHNPTXZ`dfhlprx':print(c)
+for i in b' #$&),./2568;=>ABDFGJLMNPRSVY\\_`behjknqrtwz|}~':print(i-26<<1)
