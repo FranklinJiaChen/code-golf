@@ -1,9 +1,4 @@
 import sys
 x=y=0
 d='↙↖←↲↰⇐⇙⇖⇦↘↗→↳↱⇒⇘⇗⇨'
-for a in sys.argv[1:]:
-	if a in d:x-=1
-	if a in d[9:]:x+=2
-	if a in d[1::3]+'↑⇑⇧':y+=1
-	if a in d[::3]+'↓⇓⇩':y-=1
-	print(x,y)
+for a in sys.argv[1:]:x-=1*(a in d)-2*(a in d[9:]);y+=(a in d[1::3]+'↑⇑⇧')-(a in d[::3]+'↓⇓⇩');print(x,y)
