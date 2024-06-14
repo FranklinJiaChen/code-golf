@@ -1,2 +1,2 @@
 i,b,n,s=99,'bottle','no more','s of beer on the wall'
-while-~i:print(i or 'No more',b+s[i==1:]+',',i or n,b+s[i==1:9]+'.\n'+(i and'Take one down and pass it around,'or'Go to the store and buy some more,'),~-i%100or n,b+s[i==2:]+'.\n');i-=1
+while-~i:print(i or'No more',b+s[i==1:]+',',i or n,b+s[i==1:9]+'.\n'+(i and'Take one down and pass it around,'or'Go to the store and buy some more,'),~-i%100or n,b+s[i==2:]+'.\n');i-=1
