@@ -9,6 +9,6 @@ for a in sys.argv[1:]:
 				while b:p+=1;b+=a[p]=='[';b-=a[p]==']'
 			else:l+=[p]
 		if c==']':
-			if t[h]:p=l[-1]
+			if t[h]:*_,p=l
 			else:*l,_=l
 		p+=1
