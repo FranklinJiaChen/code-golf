@@ -1,21 +1,14 @@
 import sys
 for a in sys.argv[1:]:
-	t,l=[0]*99,[];h=p=0
+	t=[0]*99;h=p=0;l=[]
 	while p<len(a):
-		c=a[p]
-		if c=='.':print(chr(t[h]),end='')
-		if c=='+':t[h]=(t[h]+1)%256
-		if c=='-':t[h]=(t[h]-1)%256
-		if c=='>':h+=1
-		if c=='<':h-=1
+		c=a[p];print(chr(t[h])*(c=='.'),end='');t[h]+=c=='+';t[h]-=c=='-';h+=c=='<';h-=c=='>'
 		if c=='[':
 			if t[h]<1:
 				b=1
-				while b:
-					p+=1
-					b+=a[p]=='[';b-=a[p]==']'
-			else:l.append(p)
+				while b:p+=1;b+=a[p]=='[';b-=a[p]==']'
+			else:l+=[p]
 		if c==']':
-			if t[h]:p=l[-1]
-			else:l.pop()
+			if t[h]:*_,p=l
+			else:*l,_=l
 		p+=1
