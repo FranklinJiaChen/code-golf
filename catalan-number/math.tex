@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Catalan Number Recursive Formula}
+\author{Franklin Chen}
+\date{\today}
+\maketitle
+
+\section{Expression}
+The closed form expression for the $n$th Catalan number is
+\[
+\frac{\binom{2n}{n}}{n+1}
+\]
+
+\section{Recursive Formula}
+The recursive formula for the $n+1$th Catalan number is
+\begin{align*}
+\frac{\binom{2(n+1)}{n+1}}{n+2} &= \frac{(2n+2)!}{(n+1)!(n+1)!} \frac{1}{n+2} \\
+&= \frac{(2n)!(2n+1)(2n+2)}{n!n!(n+1)(n+1)(n+2)} \\
+&= \frac{(2n)!}{n!n!} \frac{(2n+1)(2n+2)}{(n+2)(n+1)(n+1)} \\
+&= \frac{\binom{2n}{n}}{n+1} \frac{(2n+1)(2n+2)}{(n+2)(n+1)} \\
+&= C_n \frac{(2n+1)(2n+2)}{(n+2)(n+1)} \\
+&= C_n \frac{(2n+1)2(n+1)}{(n+2)(n+1)} \\
+&= C_n \frac{2(2n+1)}{n+2} \\
+&= C_n \frac{4n+2}{n+2}
+\end{align*}
+
+and $C_0 = 1.$
+
+\section{Recursive Formula}
+The recursive formula for the $n$th Catalan number is
+\begin{align*}
+\frac{\binom{2n}{n}}{n} &= \frac{(2n)!}{(n)!(n)!} \frac{1}{n+1} \\
+&= \frac{(2n-2)!(2n-1)(2n)}{(n-1)!(n-1)!(n)(n)(n+1)} \\
+&= \frac{(2n-2)!}{(n-1)!(n-1)!} \frac{(2n-1)(2n)}{(n)(n)(n+1)} \\
+&= \frac{\binom{2n-2}{n-1}}{n} \frac{(2n-1)(2n)}{(n)(n+1)} \\
+&= C_{n-1} \frac{(2n-1)2n}{(n)(n+1)} \\
+&= C_{n-1} \frac{2(2n-1)}{n+1} \\
+&= C_{n-1} \frac{4n-2}{n+1}
+\end{align*}
+
+and $C_0 = 1.$
+
+\end{document}
