@@ -1,3 +1,5 @@
+# supposed to be latex
+
 \documentclass{article}
 \usepackage{amsmath}
 
