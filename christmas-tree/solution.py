@@ -1,3 +1,4 @@
-for n in range(3,10):
-	for i in range(1,n+1):print(" "*(n-i+1)+"*"*(2*i-1))
-	print(" "*n+"*\n")
+t=[]
+for i in range(9):
+	t=[' '+x for x in t+['*'*(2*i+1)]];
+	if i>1:*map(print,t+[t[0]+'\n']),
