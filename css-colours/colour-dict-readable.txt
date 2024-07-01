@@ -4,8 +4,7 @@
 4. Light --> U
 5. Medium --> Q
 6. Dark --> x
-7. ff --> g
-8. 00 --> h
+
 9. Turquoise --> E
 10. GoldenRod --> J
 11. White --> !
@@ -13,3 +12,7 @@
 13. Yellow --> $
 14. Violet --> %
 15. Brown --> ^
+
+7. ff --> g
+8. 00 --> h
+16 fa --> i
