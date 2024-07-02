@@ -4,4 +4,4 @@ for n in r(1,8):
 	for i in r(n):p(s*(n-i)+d+a+d+" "*i+v)
 	p(c+(s*n)+v)
 	for i in r(2*n):p([b+s*(2*n-i-1)+d,b+s*n+[v,o][i+1==n]][i<n])
-	p(c+'\n')
+	p(c);p()
