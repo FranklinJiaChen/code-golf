@@ -1,13 +1,20 @@
 print('   2 3 4 5 6 7\n','-'*13)
 
 s=''
-for i in range(31,127):
-	i, j = divmod(i - 31, 6)
-	j += 2
-	if j == 2:
-		s += f'{i:X}:'
+for i in range(31, 127):
+	r, c = divmod(i - 31, 6)
+	c += 2
+	if c == 2:
+		s += f'{r:X}:'
 	s += ' '
-	s += [chr(i+j*16),'DEL'][i+j>21]
-	if j == 7:
+	s += [chr(r+c*16),'DEL'][r+c>21]
+	if c == 7:
 		s += '\n'
+print(s)
+
+#
+
+print('   2 3 4 5 6 7\n','-'*13)
+s=''
+for i in range(31,127):r,c=divmod(i-31,6);s+=f'{r:X}:'*(c==0)+' '+[chr(r+c*16+32),'DEL'][i>125]+'\n'*(c==5)
 print(s)
