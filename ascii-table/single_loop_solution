@@ -1,0 +1,13 @@
+print('   2 3 4 5 6 7\n','-'*13)
+
+s=''
+for i in range(31,127):
+	i, j = divmod(i - 31, 6)
+	j += 2
+	if j == 2:
+		s += f'{i:X}:'
+	s += ' '
+	s += [chr(i+j*16),'DEL'][i+j>21]
+	if j == 7:
+		s += '\n'
+print(s)
