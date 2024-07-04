@@ -1,10 +1,5 @@
 import sys
 for a in sys.argv[1:]:
-	s = ''.join(c for c in a if c.isupper()or c=='z')
-	if a[0]=='T':s+=a[2]
-	if a[0]in'CVGHP'or'Io'<a<'Mas':s+=a[-1]
-	if('Mid'<a<'New'or a=='Alaska')and a!='Nebraska':
-		for i in a[4::-1]:
-			if'i'<i:s+=i;break
-	if len(s)<2:s+=a[1]
-	print(s.upper())
+	s=''.join(c*(c.isupper()or c=='z') for c in a)+a[2]*(a[0]=='T')+a[-1]*(a[0]in'CVGHP'or'Io'<a<'Mas')
+	for i in a[4::-1]:s+=i*(('Mid'<a<'New'or a=='Alaska')and a!='Nebraska'and'i'<i)
+	s+=a[1];print(s.upper()[0:2])
