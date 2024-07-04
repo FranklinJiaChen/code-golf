@@ -1,3 +1,4 @@
+E - enumerate
 a - argument
 q - (Q, 5-tuple def) states (list of states)
 d - [Dict] state_to_idx (dictionary converting state name to index)
