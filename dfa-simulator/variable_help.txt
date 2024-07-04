@@ -1,0 +1,17 @@
+a - argument
+q - (Q, 5-tuple def) states (list of states)
+d - [Dict] state_to_idx (dictionary converting state name to index)
+s - [Sigma, 5-tuple def] alphabet (list of symbols)
+l - [List] table (list of transitions)
+p - [Paremeter of DFA] input_str (input string for the dfa)
+r - [row of input] idx (index of the current state)
+e - [one letter before f] start (contains '>' if it is a start state)
+f - [Final] accept (contains 'F' if it is a final state)
+n - [Name] name (contains the name of the state)
+t - [Table] info (contains the table of transitions)
+c - [Current state] cur_state (contains the current state)
+b - [current state name] state_name (contains the current symbol)
+
+i - [index] idx2 (iterator variable for the table)
+u - [one letter after t] i (iterator variable for the table)
+j - [one letter after i] c (iterator variable for the string)

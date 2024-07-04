@@ -1,27 +1,17 @@
 import sys
-
-def dfa_simulate(info: str):
-    states = []
-    state_to_idx = {}
-    alphabet, *table, input_str = info.split("\n")
-    alphabet = alphabet.split()
-    for idx, row in enumerate(table):
-        states.append({})
-        start, accept, name, *info = row
-        if start == '>':
-            cur_state = states[idx]
-            state_name = name
-        if accept == 'F':
-            states[idx]['F'] = 'Accept'
-        else:
-            states[idx]['F'] = 'Reject'
-        for idx2, i in enumerate(info[1::2]):
-            states[idx][alphabet[idx2]] = i
-        state_to_idx[name] = idx
-    for c in input_str[1:-1]:
-        state_name = cur_state[c]
-        cur_state = states[state_to_idx[state_name]]
-    print(state_name, cur_state['F'])
-
-for arg in sys.argv[1:]:
-    dfa_simulate(arg)
+for a in sys.argv[1:]:
+	q=[]
+	d={}
+	s,*l,p=a.split("\n")
+	for r,(e,f,n,*t)in enumerate(l):
+		q.append({})
+		if e=='>':
+			c=q[r]
+			b=n
+		q[r]['']=['Reject','Accept'][f=='F']
+		for i,u in enumerate(t[1::2]):
+			q[r][s.split()[i]]=u
+		d[n]=r
+	for j in p[1:-1]:
+		c=q[d[b:=c[j]]]
+	print(b,c[''])
