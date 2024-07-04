@@ -1,20 +1,10 @@
 import sys
-for arg in sys.argv[1:]:
-    s = ""
-    for c in arg:
-        if c.isupper() or c == 'z':
-            s += c
-    if arg[0:2] == 'Te':
-        s += arg[2]
-    if arg[0] in 'CVGHP' or 'Io' < arg < 'Mas':
-        s += arg[-1]
-    if arg == 'Alaska':
-        s += arg[-2]
-    if 'Mid' < arg < 'New' and arg != 'Nebraska':
-        for i in arg[4::-1]:
-            if 'i' < i:
-                s += i
-                break
-    if len(s) < 2:
-        s += arg[1]
-    print(s.upper())
+for a in sys.argv[1:]:
+	s = ''.join(c for c in a if c.isupper()or c=='z')
+	if a[0]=='T':s+=a[2]
+	if a[0]in'CVGHP'or'Io'<a<'Mas':s+=a[-1]
+	if('Mid'<a<'New'or a=='Alaska')and a!='Nebraska':
+		for i in a[4::-1]:
+			if'i'<i:s+=i;break
+	if len(s)<2:s+=a[1]
+	print(s.upper())
