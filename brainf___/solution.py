@@ -1,5 +1,5 @@
 import sys
-for a in sys.argv[1:]:
+for a in sys.argv:
 	t=[0]*99;h=p=0;l=[]
 	while p<len(a):
 		c=a[p];print(chr(t[h])*(c=='.'),end='');t[h]+=c=='+';t[h]-=c=='-';h+=c=='<';h-=c=='>'
