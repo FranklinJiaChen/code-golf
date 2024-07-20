@@ -1,3 +1,4 @@
-for n in range(1001):
+f=range
+for n in f(1001):
 	r=int(str(n)[::-1])
-	if all([n!=r]+[n%i for i in range(2,n)]+[r%i for i in range(2,r)]):print(n)
+	if all([n!=r]+[n%i for i in f(2,n)]+[r%i for i in f(2,r)]):print(n)
