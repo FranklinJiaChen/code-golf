@@ -1,11 +1,7 @@
-d={}
-for i in range(1001):
-	j=2
-	while i>1:
-		if i%j<1:
-			if j not in d:d[j]=0
-			i/=j;d[j]+=1
-		else:j+=1
 s=""
-for k,v in d.items():s+=[f"{k}*",f"{k}^{v}*"][v>1]
+for i in range(2,998):
+	f=0;n=1000
+	if all(i%j for j in range(2,i)):
+		while n:f+=(n:=n//i)
+		s+=[f"{i}*",f"{i}^{f}*"][f>1]
 print(s[:-1])
