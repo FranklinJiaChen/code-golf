@@ -13,5 +13,5 @@ for i in range(1001):
 
 s = ""
 for key, value in d.items():
-    s+=[f"{key}*",f"{key}^{value}*"][value>1]
+    s+=f"{key}"+["",f"^{value}"][value>1]+"*"
 print(s[:-1])
