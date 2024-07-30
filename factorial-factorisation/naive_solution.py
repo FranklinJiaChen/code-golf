@@ -1,18 +1,19 @@
-d={}
-for i in range(1001):
+dict = {}
+
+for i in range(1, 1001):
     j = 2
-    while i>1:
+    while i != 1:
         if i % j == 0:
             i //= j
-            if j in d:
-                d[j] += 1
+            if j in dict:
+                dict[j] += 1
             else:
-                d[j] = 1
+                dict[j] = 1
         else:
             j+=1
 
 s = ""
-for key, value in d.items():
+for key, value in dict.items():
     if value > 1:
         s += f"{key}^{value}*"
     else:
