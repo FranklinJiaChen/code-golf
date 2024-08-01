@@ -1,2 +1,2 @@
-a=1;b=0;p=print;p("0")
-exec("p(a:=a+b);p(b:=a+b);"*15)
+a=b=1;p=print;p(0)
+exec('p(a);p(b);a+=b;b+=a;'*15)
