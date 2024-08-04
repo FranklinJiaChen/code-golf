@@ -1,7 +1,6 @@
-s='1';z=1
-while z-1e3:
-	n=2
-	for i in range(1,z):
-		while i*n<z+1 and s.endswith(s[-i:]*n):n+=1
-	s+=str(~-n);z=len(s)
-for c in s:print(c)
+s='1'
+while len(s)-1001:
+	n=2;print(s[-1])
+	for i in range(1,len(s)):
+		while s.endswith(s[-i:]*n):n+=1
+	s+=str(~-n)
