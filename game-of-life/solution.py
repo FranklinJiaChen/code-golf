@@ -1,3 +1,3 @@
 import sys
-i=sys.argv[1];c=0
-for n in i:print(['.#'[1+(n>'-')<sum(i[c+j-66]=='#'for j in b' !"ACbcd'if c+j<1088)<4],n][n<' '],end='');c+=1
+i=sys.argv[c:=1]
+for n in i:print(['.#'[(n>'-')+1<sum(i[c+j-67]=='#'for j in b' !"ACbcd'if c+j<1089)<4],n][n<' '],end='');c+=1
