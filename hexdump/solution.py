@@ -1,7 +1,7 @@
 import sys
 for arg in sys.argv[1:]:
 	for i in range((len(arg)-1)//16+1):
-		s='0'*(8-len(hex(i*16)[2:]))+hex(i*16)[2:]+': '
+		s=('0'*7+hex(i*16)[2:])[-8:]+': '
 		n=0
 		for c in arg[i*16:(i+1)*16]:
 			h=hex(ord(c))[2:]
